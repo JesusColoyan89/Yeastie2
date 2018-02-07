@@ -1,0 +1,229 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>YeastieBois</title>
+
+	<!-- JQuery -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	 <link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+	<script
+  	src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous"></script>
+</head>
+<body>
+	<span class="border-top-0"></span>
+	<div class ="container">
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+	 <div class="jumbotron">
+	 	 <h1 id="yeast">Yeastie Bois  <img src="./images/beerlogo.png" id="logo"></h1>
+	</div>
+	
+	
+</div>		
+	</div>
+	<form name="beerReviewForm" id="formToReset">
+
+		<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+		<button id="tips">Tips</button>
+
+		  <p class="popup">This is a quiz to see how accurate your beer taste is. You will earn 2 points for matches and lose one for mismatches. 5 points for matching IBU or ABV</p>
+		 </div>
+		
+	</div>
+
+		<h3 id="beername">Beer Name:</h3>
+		  <select id="allBeerList" name="beerName">Select Beer</select>
+
+	<div class="row" id="aroma">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h3>Aroma</h3>
+	</div>
+	</div>
+
+	
+
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h4 class ="options">Malt Aroma</h4>
+		<input type="checkbox" name="aromaMalt" value="Sweet"> Sweet
+		<input type="checkbox" name="aromaMalt" value="Grainy"> Grainy
+		<input type="checkbox" name="aromaMalt" value="Toasty"> Toasty
+		<input type="checkbox" name="aromaMalt" value="Fruity"> Fruity
+		<input type="checkbox" name="aromaMalt" value="Burnt"> Burnt
+		<input type="checkbox" name="aromaMalt" value="Rich"> Rich
+		<input type="checkbox" name="aromaMalt" value="Caramel"> Caramel
+		<input type="checkbox" name="aromaMalt" value="Estery"> Estery
+	</div>
+	</div>
+
+
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h4 class ="options">Hops Aroma</h4>
+		<input type="checkbox" name="aromaHops" value="Peppery"> Peppery
+		<input type="checkbox" name="aromaHops" value="Citrus"> Citrus
+		<input type="checkbox" name="aromaHops" value="Floral"> Floral
+		<input type="checkbox" name="aromaHops"
+		value="Coffee"> Coffee
+		<input type="checkbox" name="aromaHops" value="Spicy"> Spicy
+		<input type="checkbox" name="aromaHops" value="Earthy"> Earthy
+		<input type="checkbox" name="aromaHops" value="Piney"> Piney
+		<input type="checkbox" name="aromaHops" value="Fruity"> Fruity
+		<input type="checkbox" name="aromaHops" value="Estery"> Estery
+	</div>
+	</div>
+
+    
+	<div class="row" id="appearance">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h3>Appearance</h3>
+	</div>
+	</div>	
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h4 class ="options">Clarity</h4>
+
+		<input type="checkbox" name="clarity" value="Clear"> Clear
+		<input type="checkbox" name="clarity" value="Cloudy"> Cloudy
+		<input type="checkbox" name="clarity" value="Hazy"> Hazy
+		<input type="checkbox" name="clarity" value="Dark"> Dark
+
+	</div>
+	</div>
+
+
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h4 class ="options">Color</h4>
+		<input type="checkbox" name="beerColor" value="Straw"> Straw
+		<input type="checkbox" name="beerColor" value="Yellow"> Yellow
+		<input type="checkbox" name="beerColor" value="Gold"> Gold
+		<input type="checkbox" name="beerColor" value="Amber"> Amber
+		<input type="checkbox" name="beerColor" value="Red"> Red
+		<input type="checkbox" name="beerColor" value="Copper"> Copper
+		<input type="checkbox" name="beerColor" value="Brown"> Brown
+		<input type="checkbox" name="beerColor" value="Black"> Black
+	</div>
+	</div>
+
+
+	<div class="row" id="flavor">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h3>Flavor Notes</h3>
+	</div>
+	</div>
+
+
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">		
+		<h4 class ="options">Malt Flavor</h4>
+		<input type="checkbox" name="flavorMalt" value="Sweet"> Sweet
+		<input type="checkbox" name="flavorMalt" value="Grainy"> Grainy
+		<input type="checkbox" name="flavorMalt" value="Toasty"> Toasty
+		<input type="checkbox" name="flavorMalt" value="Fruity"> Fruity
+		<input type="checkbox" name="flavorMalt" value="Burnt"> Burnt
+		<input type="checkbox" name="flavorMalt" value="Rich"> Rich
+		<input type="checkbox" name="flavorMalt" value="Caramel"> Caramel
+		<input type="checkbox" name="flavorMalt"
+		value="Coffee"> Coffee
+		<input type="checkbox" name="flavorMalt" value="Estery"> Estery
+		<input type="checkbox" name="flavorMalt"
+		value="Chocolate"> Chocolate
+	</div>
+	</div>
+
+
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h4 class ="options">Hops Flavor</h4>
+		<input type="checkbox" name="flavorHops" value="Peppery"> Peppery
+		<input type="checkbox" name="flavorHops" value="Citrus"> Citrus
+		<input type="checkbox" name="flavorHops" value="Floral"> Floral
+		<input type="checkbox" name="flavorHops" value="Spicy"> Spicy
+		<input type="checkbox" name="flavorHops" value="Earthy"> Earthy
+		<input type="checkbox" name="flavorHops" value="Piney"> Piney
+		<input type="checkbox" name="flavorHops" value="Fruity"> Fruity
+		<input type="checkbox" name="flavorHops" value="Estery"> Estery
+	</div>
+	</div>
+		
+
+	<div class="row">
+
+
+	<div class="col-sm-12 col-md-12 col-lg-12">	<!-- !!!!!!! May not need this div !!!!!!!! -->
+	<div class="col-sm-12 col-md-12 col-lg-12">	
+		<h4>Bonus Points</h4>
+		<span class="ibu" data-ibutext="Bonus Points IBU: 0-100 International Bitter Units. (EX. Coors Light IBU:10)">Guess IBU</span> <input type="text" id="ibuBonusPoints" >
+		<span class="abv" data-abvtext="Bonus Points ABV: 0-10 Acohol by volume. (EX. Coors Light ABV:4.2)">Guess ABV</span> 
+
+		 <input type="text" id="abvBonusPoints" >
+
+		<h4>Personal Opinion</h4>
+		<p> Rating (1-10):<input type="text" id="rating"></p>
+		<p>Comments: <input type="text" id="comments"></p>
+
+		<button><input type="submit" id="reviewSubmitButton"></button>
+
+	</div>
+
+	</div> <!-- !!!!!!! May not need this div !!!!!!!! -->
+
+	</div>
+	</form>
+	<button id="logoutButton">Logout</button>
+
+		<footer class="page-footer
+            center-on-small-only">
+
+ 
+    <div class=“container-fluid”>
+        <div class=“row”>
+
+           <div class="col-md-12">
+                <h3 class=“title”>©Yeastie Bois</h3>
+            </div>
+         </div>
+         <div class=“row”>
+             <div class=“col-md-12”>
+
+               <h6 class=“ourNames”>Powered By: Andrew, Tyler, Jesus, Steve</h6>
+            </div>
+         </div>  
+            
+   </div>
+  
+    
+
+  
+
+</footer>	
+	</div> <!-- CONTAINER CLOSURE -->
+
+	
+
+	
+
+
+	<script type="text/javascript" src="js/submitForm.js"></script>
+
+	<!-- Grade Submission JS -->
+	<!-- <script type="text/javascript" src="js/compareAnswers.js"></script> -->
+
+	<!-- List All Beers -->
+	<script type="text/javascript" src="js/listAllBeers.js"></script>
+
+	<!-- CHECK LOGIN -->
+	<script type="text/javascript" src="js/login.js"></script>
+
+	<!-- LOGOUT -->
+	<script type="text/javascript" src="js/logout.js"></script>
+</body>
+</html>

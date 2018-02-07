@@ -1,0 +1,124 @@
+
+<html>
+<head>
+    <title>
+    </title>
+
+ 
+	 <link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<script
+  	src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous"></script>
+  </head>	
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				 <div class="jumbotron">
+	 	 			<h1 id="yeast">Yeastie Bois  <img src="./images/beerlogo.png" id="logo"></h1>
+	 	 		</div>
+	 	 	</div>
+	 	 </div>
+	 	
+	 	<div class="row">
+	 		<div class="col-sm-12 col-md-12 col-lg-12">
+	 			<div id="leaderboard">
+	 				<h2> Leaderboard </h2>
+
+	 				
+	 			</div>
+	 		</div>
+	 	</div>		
+	<footer class="page-footer
+			center-on-small-only">
+
+   
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3 class="title">©Yeastie Bois</h3>
+            </div>
+         </div>
+         <div class="row">
+         	<div class="col-md-12">
+
+                <h6 class="ourNames">Powered By: Andrew, Tyler, Jesus, Steve</h6>
+            </div>
+         </div>   
+            
+    </div>
+   
+    
+
+   
+
+</footer>
+
+
+	</div>
+<script type="text/javascript">
+var leaderboardArray = [];
+var sel = document.getElementById('leaderboard');
+	
+
+$.get("/api/users", function(data) {
+	console.log(data);
+	for(i=0; i<data.length; i++){
+
+			var object = {
+				Username: data[i].Username,
+				Userscore: data[i].UserScore
+			};
+			console.log(object);
+		leaderboardArray.push(object);
+	}
+
+	// myArray.sort(function(a, b) {
+ 	// return a.distance - b.distance;
+	// });
+
+	leaderboardArray.sort(function(b,a){
+		return a.Userscore - b.Userscore;
+	});
+
+	for(i=0; i<leaderboardArray.length; i++){
+		var counter = i + 1;
+		var newDiv = document.createElement("div");
+		newDiv.innerHTML = "#" + counter + ": " + leaderboardArray[i].Username + " " + leaderboardArray[i].Userscore;
+		sel.appendChild(newDiv);
+	};
+});
+
+
+	// myArray.sort(function(a, b) {
+ 	// return a.distance - b.distance;
+	// });
+
+	leaderboardArray.sort(function(b,a){
+		return a.Userscore - b.Userscore;
+	});
+
+<<<<<<< HEAD
+	for(i=0; i<leaderboardArray.length; i++){
+		var counter = i + 1;
+		var newDiv = document.createElement("div");
+		newDiv.innerHTML = "#" + counter + ": " + leaderboardArray[i].Username + " " + leaderboardArray[i].Userscore;
+		sel.appendChild(newDiv);
+	};
+});
+=======
+	// .append("<h2> 'leaderboard' "
+	// 	data.Username,
+	// 	data.Userscore
+	// 	)
+	
+>>>>>>> ebfbc8529f464e76c1a5a1ac393c04a5e2942238
+
+
+</script>	
+</body>
+</html>
