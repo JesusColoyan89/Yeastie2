@@ -1,6 +1,7 @@
 .media-object {
 	height: 64px;
 	width: 64px;
+	border-radius: 10px;
 }
 .userMedia{
 	font-family: 'Monoton', cursive;
@@ -9,6 +10,7 @@
 	border-style: groove;
 	height: 500px;
 	border-color: #fae7bc;
+	border-radius: 25px;
 }
 .media {
 	margin-top: 20px !important;
